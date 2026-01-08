@@ -23,12 +23,13 @@
         android:id="@+id/imgContact"
         android:layout_width="80dp"
         android:layout_height="80dp"
+        android:layout_marginTop="32dp"
         android:clickable="true"
         android:focusable="true"
         android:padding="12dp"
         android:src="@drawable/sign_in"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.975"
+        app:layout_constraintHorizontal_bias="0.937"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 </androidx.constraintlayout.widget.ConstraintLayout>

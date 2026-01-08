@@ -37,7 +37,7 @@ public class MainActivity extends AppCompatActivity {
         Slider sliderTime = findViewById(R.id.sliderTime);
         if (sliderTime != null) {
             sliderTime.setValueFrom(0f);
-            sliderTime.setValueTo(24f);
+            sliderTime.setValueTo(100f);
             sliderTime.setStepSize(1f);
             sliderTime.setValue(4f); // default 4 hours
         }

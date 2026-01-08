@@ -1,5 +1,6 @@
 package com.example.wiseroute12;
 
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -43,13 +44,19 @@ public class RegisterActivity extends AppCompatActivity {
 
                 boolean success = dbHelper.addUser(username, email, password);
                 if (success) {
+                    SharedPreferences sp = getSharedPreferences("user_prefs", MODE_PRIVATE);
+                    SharedPreferences.Editor editor = sp.edit();
+                    editor.putBoolean("isLoggedIn", true);
+                    editor.putString("username", username);
+                    editor.apply();
+
                     Toast.makeText(RegisterActivity.this, "הרשמה הצליחה!", Toast.LENGTH_SHORT).show();
-                    // כאן אפשר לעבור למסך ההתחברות או למסך הראשי
                     finish();
                 } else {
                     Toast.makeText(RegisterActivity.this, "שם משתמש או אימייל כבר קיימים", Toast.LENGTH_SHORT).show();
                 }
             }
         });
+
     }
 }
