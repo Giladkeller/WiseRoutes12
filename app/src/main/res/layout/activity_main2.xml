@@ -1,0 +1,341 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <LinearLayout
+        android:id="@+id/postsContainer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="8dp">
+
+        <!-- כאן נכנסים כל הפוסטים שלך כמו שהגדרת קודם -->
+
+
+        <!-- פוסט 1 -->
+        <LinearLayout
+            android:id="@+id/post1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="8dp"
+            android:layout_marginBottom="12dp">
+
+            <!-- שם המסלול -->
+            <TextView
+                android:id="@+id/trailName1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="נחל עמוד"
+                android:textSize="18sp"
+                android:textStyle="bold"/>
+
+            <!-- תמונה -->
+            <ImageView
+                android:id="@+id/image1"
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                android:scaleType="centerCrop"
+                android:layout_marginTop="4dp"
+                android:src="@drawable/sample_trail"/>
+
+            <!-- תיאור המסלול -->
+            <TextView
+                android:id="@+id/description1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="מסלול יפה עם מים ונופים מדהימים."
+                android:layout_marginTop="4dp"/>
+
+            <!-- כפתור לייק + מספר לייקים + כפתור תגובה -->
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginTop="8dp">
+
+                <!-- כפתור לייק -->
+                <Button
+                    android:id="@+id/likeBtn1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="❤️ לייק" />
+
+                <!-- מספר לייקים ליד הלייק -->
+                <TextView
+                    android:id="@+id/likesCount1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="0"
+                    android:layout_marginStart="8dp"
+                    android:textSize="16sp"
+                    android:gravity="center_vertical"/>
+
+                <!-- כפתור תגובה -->
+                <Button
+                    android:id="@+id/commentBtn1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="💬 תגובה"
+                    android:layout_marginStart="16dp" />
+
+            </LinearLayout>
+        </LinearLayout>
+
+        <!-- פוסט 2 -->
+        <LinearLayout
+            android:id="@+id/post2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="8dp"
+            android:layout_marginBottom="12dp">
+
+            <TextView
+                android:id="@+id/trailName2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="מסלול הירדן"
+                android:textSize="18sp"
+                android:textStyle="bold"/>
+
+            <ImageView
+                android:id="@+id/image2"
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                android:scaleType="centerCrop"
+                android:layout_marginTop="4dp"
+                android:src="@drawable/sample_trail"/>
+
+            <TextView
+                android:id="@+id/description2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="מסלול רגוע, מתאים למשפחות עם ילדים."
+                android:layout_marginTop="4dp"/>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginTop="8dp">
+
+                <Button
+                    android:id="@+id/likeBtn2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="❤️ לייק" />
+
+                <TextView
+                    android:id="@+id/likesCount2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="0"
+                    android:layout_marginStart="8dp"
+                    android:textSize="16sp"
+                    android:gravity="center_vertical"/>
+
+                <Button
+                    android:id="@+id/commentBtn2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="💬 תגובה"
+                    android:layout_marginStart="16dp" />
+
+            </LinearLayout>
+        </LinearLayout>
+
+        <!-- פוסט 3 -->
+        <LinearLayout
+            android:id="@+id/post3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="8dp"
+            android:layout_marginBottom="12dp">
+
+            <TextView
+                android:id="@+id/trailName3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="מצפה רמון"
+                android:textSize="18sp"
+                android:textStyle="bold"/>
+
+            <ImageView
+                android:id="@+id/image3"
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                android:scaleType="centerCrop"
+                android:layout_marginTop="4dp"
+                android:src="@drawable/sample_trail"/>
+
+            <TextView
+                android:id="@+id/description3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="מסלול מדברי עם נופים מרהיבים."
+                android:layout_marginTop="4dp"/>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginTop="8dp">
+
+                <Button
+                    android:id="@+id/likeBtn3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="❤️ לייק" />
+
+                <TextView
+                    android:id="@+id/likesCount3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="0"
+                    android:layout_marginStart="8dp"
+                    android:textSize="16sp"
+                    android:gravity="center_vertical"/>
+
+                <Button
+                    android:id="@+id/commentBtn3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="💬 תגובה"
+                    android:layout_marginStart="16dp" />
+
+            </LinearLayout>
+        </LinearLayout>
+
+        <!-- פוסט 4 -->
+        <LinearLayout
+            android:id="@+id/post4"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="8dp"
+            android:layout_marginBottom="12dp">
+
+            <TextView
+                android:id="@+id/trailName4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="נחל הבניאס"
+                android:textSize="18sp"
+                android:textStyle="bold"/>
+
+            <ImageView
+                android:id="@+id/image4"
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                android:scaleType="centerCrop"
+                android:layout_marginTop="4dp"
+                android:src="@drawable/sample_trail"/>
+
+            <TextView
+                android:id="@+id/description4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="מסלול עם מים ומפלים, מתאים לכל המשפחה."
+                android:layout_marginTop="4dp"/>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginTop="8dp">
+
+                <Button
+                    android:id="@+id/likeBtn4"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="❤️ לייק" />
+
+                <TextView
+                    android:id="@+id/likesCount4"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="0"
+                    android:layout_marginStart="8dp"
+                    android:textSize="16sp"
+                    android:gravity="center_vertical"/>
+
+                <Button
+                    android:id="@+id/commentBtn4"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="💬 תגובה"
+                    android:layout_marginStart="16dp" />
+
+            </LinearLayout>
+        </LinearLayout>
+
+        <!-- פוסט 5 -->
+        <LinearLayout
+            android:id="@+id/post5"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="8dp"
+            android:layout_marginBottom="12dp">
+
+            <TextView
+                android:id="@+id/trailName5"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="הר הכרמל"
+                android:textSize="18sp"
+                android:textStyle="bold"/>
+
+            <ImageView
+                android:id="@+id/image5"
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                android:scaleType="centerCrop"
+                android:layout_marginTop="4dp"
+                android:src="@drawable/sample_trail"/>
+
+            <TextView
+                android:id="@+id/description5"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="מסלול טבעי יפהפה עם נקודות תצפית."
+                android:layout_marginTop="4dp"/>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginTop="8dp">
+
+                <Button
+                    android:id="@+id/likeBtn5"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="❤️ לייק" />
+
+                <TextView
+                    android:id="@+id/likesCount5"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="0"
+                    android:layout_marginStart="8dp"
+                    android:textSize="16sp"
+                    android:gravity="center_vertical"/>
+
+                <Button
+                    android:id="@+id/commentBtn5"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="💬 תגובה"
+                    android:layout_marginStart="16dp" />
+
+            </LinearLayout>
+        </LinearLayout>
+
+    </LinearLayout>
+</ScrollView>
