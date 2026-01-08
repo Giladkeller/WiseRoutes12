@@ -4,9 +4,7 @@ plugins {
 
 android {
     namespace = "com.example.wiseroute12"
-    compileSdk {
-        version = release(36)
-    }
+    compileSdk = 36
 
     defaultConfig {
         applicationId = "com.example.wiseroute12"
@@ -14,6 +12,13 @@ android {
         targetSdk = 36
         versionCode = 1
         versionName = "1.0"
+
+        // API KEY מתוך local.properties
+        buildConfigField(
+            "String",
+            "OPENAI_API_KEY",
+            "\"${System.getenv("OPENAI_API_KEY") ?: project.findProperty("OPENAI_API_KEY")}\""
+        )
 
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
     }
@@ -27,6 +32,7 @@ android {
             )
         }
     }
+
     compileOptions {
         sourceCompatibility = JavaVersion.VERSION_11
         targetCompatibility = JavaVersion.VERSION_11
@@ -34,10 +40,16 @@ android {
 }
 
 dependencies {
+    // Android בסיסי
     implementation(libs.appcompat)
     implementation(libs.material)
     implementation(libs.activity)
     implementation(libs.constraintlayout)
+
+    // OkHttp (חובה ל־API)
+    implementation("com.squareup.okhttp3:okhttp:4.12.0")
+
+    // Tests
     testImplementation(libs.junit)
     androidTestImplementation(libs.ext.junit)
     androidTestImplementation(libs.espresso.core)
