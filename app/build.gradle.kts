@@ -6,6 +6,9 @@ android {
     namespace = "com.example.wiseroute12"
     compileSdk = 36
 
+    buildFeatures {
+        buildConfig = true
+        }
     defaultConfig {
         applicationId = "com.example.wiseroute12"
         minSdk = 24
@@ -37,6 +40,8 @@ android {
         sourceCompatibility = JavaVersion.VERSION_11
         targetCompatibility = JavaVersion.VERSION_11
     }
+
+
 }
 
 dependencies {
