@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="16dp">
+
+        <!-- שם המסלול -->
+        <EditText
+            android:id="@+id/etTrailName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="שם המסלול" />
+
+        <!-- תיאור -->
+        <EditText
+            android:id="@+id/etDescription"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="תיאור המסלול"
+            android:layout_marginTop="8dp" />
+
+        <!-- תמונה -->
+        <ImageView
+            android:id="@+id/ivPostImage"
+            android:layout_width="match_parent"
+            android:layout_height="180dp"
+            android:layout_marginTop="12dp"
+            android:background="#DDDDDD"
+            android:scaleType="centerCrop"
+            android:src="@drawable/ic_add_photo" />
+
+        <!-- כפתור בחירת תמונה -->
+        <Button
+            android:id="@+id/btnChooseImage"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="בחר תמונה"
+            android:layout_marginTop="8dp" />
+
+        <!-- כפתור פרסום -->
+        <Button
+            android:id="@+id/btnPublish"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="פרסם פוסט"
+            android:layout_marginTop="16dp" />
+
+    </LinearLayout>
+</ScrollView>
