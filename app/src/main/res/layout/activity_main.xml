@@ -1,19 +1,81 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/main"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity">
+    android:padding="16dp"
+    android:id="@+id/main">
 
-    <TextView
-        android:layout_width="wrap_content"
+    <LinearLayout
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Hello World!"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        android:orientation="vertical">
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+        <!-- 1. בחירת אזור -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="בחירת אזור" />
+
+        <Spinner
+            android:id="@+id/spinnerRegion"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <!-- 2. כמות מטיילים -->
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="כמות מטיילים">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/etPeople"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="number" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <!-- 3. טווח גילאים -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="טווח גילאים" />
+
+        <!-- Age: RangeSlider (two thumbs) -->
+        <com.google.android.material.slider.RangeSlider
+            android:id="@+id/sliderAge"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <!-- 4. כמות זמן (בשעות) -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="כמות זמן (בשעות)" />
+
+        <!-- Time: single Slider -->
+        <com.google.android.material.slider.Slider
+            android:id="@+id/sliderTime"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <!-- 5. כמות קילומטרים -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="כמות קילומטרים" />
+
+        <!-- Distance: single Slider -->
+        <com.google.android.material.slider.Slider
+            android:id="@+id/sliderDistance"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <!-- 6. נגישות -->
+        <com.google.android.material.switchmaterial.SwitchMaterial
+            android:text="נגיש למסלולי נכים"
+            android:id="@+id/switchAccessibility"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+    </LinearLayout>
+</ScrollView>
