@@ -6,6 +6,11 @@
     android:layout_height="match_parent"
     android:padding="8dp">
 
+    <!-- רווח קטן למעלה כדי להזיז את הכפתור למטה -->
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="25dp" />
+
     <!-- כפתור הוסף פוסט -->
     <Button
         android:id="@+id/addPostBtn"
@@ -13,7 +18,8 @@
         android:layout_height="wrap_content"
         android:text="➕ הוסף פוסט"
         android:layout_gravity="center_horizontal"
-        android:layout_marginBottom="8dp"/>
+        android:layout_marginBottom="8dp"
+        android:layout_marginTop="16dp"/>
 
     <!-- ScrollView לפיד הפוסטים -->
     <ScrollView
@@ -60,14 +66,12 @@
                     android:text="מסלול יפה עם מים ונופים מדהימים."
                     android:layout_marginTop="4dp"/>
 
-                <!-- לייק + מספר לייקים + תגובה -->
                 <LinearLayout
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:orientation="horizontal"
                     android:layout_marginTop="8dp">
 
-                    <!-- ImageButton לייק -->
                     <ImageButton
                         android:id="@+id/likeBtn1"
                         android:layout_width="40dp"

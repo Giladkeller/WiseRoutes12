@@ -14,7 +14,8 @@
             android:id="@+id/etTrailName"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="שם המסלול" />
+            android:hint="שם המסלול"
+            android:padding="8dp"/>
 
         <!-- תיאור -->
         <EditText
@@ -22,13 +23,14 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:hint="תיאור המסלול"
-            android:layout_marginTop="8dp" />
+            android:layout_marginTop="8dp"
+            android:padding="8dp"/>
 
         <!-- תמונה -->
         <ImageView
             android:id="@+id/ivPostImage"
             android:layout_width="match_parent"
-            android:layout_height="180dp"
+            android:layout_height="250dp"
             android:layout_marginTop="12dp"
             android:background="#DDDDDD"
             android:scaleType="centerCrop"
@@ -40,7 +42,14 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="בחר תמונה"
-            android:layout_marginTop="8dp" />
+            android:layout_marginTop="8dp"
+            android:layout_gravity="center_horizontal"/>
+
+        <!-- רווח גמיש כדי לדחוף את הכפתור למטה -->
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1" />
 
         <!-- כפתור פרסום -->
         <Button
@@ -48,7 +57,6 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="פרסם פוסט"
-            android:layout_marginTop="16dp" />
-
+            android:layout_marginTop="16dp"/>
     </LinearLayout>
 </ScrollView>
